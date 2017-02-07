@@ -49,6 +49,20 @@ router.route('/logError')
     res.end('error logged');
 })
 
+//on routes that ends in error download 
+router.route('/log/error/download')
+.get(function(req, res) {
+    var file = __dirname + '/logs/error.log';
+    res.download(file); // Set disposition and send it.
+})
+
+//on routes that ends in error download 
+router.route('/log/info/download')
+.get(function(req, res) {
+    var file = __dirname + '/logs/info.log';
+    res.download(file); // Set disposition and send it.
+})
+
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
