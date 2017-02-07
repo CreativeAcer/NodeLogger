@@ -12,6 +12,8 @@ npm install
 
 ## Usage
 
+Make sure directory has logs folder.
+
 ```bashp
 npm server.js
 ```
