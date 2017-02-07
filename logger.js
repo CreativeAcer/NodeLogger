@@ -2,6 +2,21 @@ var winston = require('winston');
 winston.emitErrs = true;
 
 var logger = new (winston.Logger)({
+    levels: {
+        error: 0,
+        warn: 1,
+        sql: 2,
+        info: 3,
+        console: 4
+    },
+
+    colors: {
+        console: 'magenta',
+        sql: 'cyan',
+        info: 'green',
+        warn: 'yellow',
+        error: 'red'
+    },
     transports: [
         new (winston.transports.File)({
             name: 'info-file',
