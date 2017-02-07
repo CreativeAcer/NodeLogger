@@ -49,6 +49,21 @@ router.route('/logError')
     res.end('error logged');
 })
 
+
+// on routes that end in /Info POST and GET
+// ----------------------------------------------------
+
+router.route('/log/Info')
+.get(function(req, res) {
+    res.json({ message: 'Please post json data to logInfo API' });  
+})
+
+.post(function(req, res){ 
+    var data = req.body;
+    logger.info(data);
+    res.end('info logged');
+})
+
 //on routes that ends in error download 
 router.route('/log/error/download')
 .get(function(req, res) {
