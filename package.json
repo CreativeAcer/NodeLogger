@@ -1,13 +1,14 @@
 {
   "name": "nodelogger",
   "version": "1.0.0",
-  "description": "Tool used for logging events from sharepoint projects",
+  "description": "Tool used for logging events",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "sharepoint",
+    "winston",
+    "node",
     "logging"
   ],
   "author": "Marco Moris",
